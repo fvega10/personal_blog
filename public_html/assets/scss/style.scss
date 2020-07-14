@@ -1,0 +1,23 @@
+	@import '_fonts';
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body{ 
+		background-color: $gray-color;
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #333;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 100%;	
+		@include fonts-branding-1;
+		p, h1, h2, h3, h4, h5, li, small{
+			&::selection {
+				background-color: $pink-color;
+			}
+		}
+	}
+	//@import '_preloader';
