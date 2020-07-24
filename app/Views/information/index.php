@@ -111,30 +111,30 @@
 		<div class="draw_line_info"></div>
 	</div>
 	<div class="row center-align">
-		<div class="col s12 m4" data-aos="fade-right">
+		<div class="col s12 m12 l4" data-aos="fade-right">
 			<h5><?= $lang->lang['Development_projects']; ?></h5>
 			<div class="row">
 				<span class="plus">
 					+
 				</span>
-				<span data-purecounter-duration="10" data-purecounter-end="50"
+				<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="50"
                 class="purecounter">0</span>
 			</div>
 		</div>
-		<div class="col s12 m4" data-aos="fade-left">
+		<div class="col s12 m12 l4" data-aos="fade-left">
 			<h5><?= $lang->lang['Year_experience']; ?></h5>
 			<span class="plus">
 				+
 			</span>
-			<span data-purecounter-duration="10" data-purecounter-end="10"
+			<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="10"
                 class="purecounter">0</span>
 		</div>
-		<div class="col s12 m4" data-aos="fade-down">
+		<div class="col s12 m12 l4" data-aos="fade-down">
 			<h5><?= $lang->lang['Tools_used']; ?></h5>
 			<span class="plus">
 				+
 			</span>
-			<span data-purecounter-duration="10" data-purecounter-end="20"
+			<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="20"
                 class="purecounter">0</span>
 		</div>
 	</div>

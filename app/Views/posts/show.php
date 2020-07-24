@@ -8,7 +8,7 @@
 ?>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo">Fabricio Vega | Sitio Web</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="/index.php"><?= $lang->lang['Home_button']; ?></a></li>
                     <li><a href="/contact/index.php?action=create"><?= $lang->lang['Contact_button']; ?></a></li>

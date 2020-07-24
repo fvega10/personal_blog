@@ -3,7 +3,23 @@
 }
 
 @media only screen and (max-width: 773px){
-	
+    .home{
+        background-position: 55% 100%;
+        h1{
+            font-size: 58px;
+        }
+        h5 {
+            font-size: 22px;
+        }
+    }
+    .applications {
+        clip-path: none;
+        min-height: auto;
+        height: auto;
+    }
+    .information{
+        clip-path: none;
+    }
 }
 
 @media only screen and (max-width: 450px){
