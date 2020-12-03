@@ -1,6 +1,4 @@
 {
-    "name": "Favitae",
-    "description": "Envío de email",
     "require": {
         "phpmailer/phpmailer": "^6.1"
     }

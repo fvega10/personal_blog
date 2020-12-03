@@ -160,6 +160,7 @@
 				endif;
 			}
 		}
+		
 		public function edit()
 		{
 			$id               = isset($_GET['id']) ? $_GET['id'] : null;
@@ -373,7 +374,7 @@
 			$like       	  = $this->userModel->postLike($id);
 
 			if(!$this->userModel->isError()) :
-				$this->message->setSuccessMessage(null, "Gracias por el Like =)", null);
+				$this->message->setSuccessMessage(null, $this->lang->lang['Likes'], null);
 				$this->show();
 			else :
 				$this->show();

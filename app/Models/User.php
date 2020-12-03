@@ -1,6 +1,9 @@
 <?php
 namespace MyApp\Models{
     use \EasilyPHP\Database\DBMySQL;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
     class User
     {
         private $db    = null;
@@ -77,6 +80,68 @@ namespace MyApp\Models{
         }
         public function update($id, $fullname, $username, $user_color)
         {
+        }
+        public function sendEmailContact($nombre, $email, $subject, $message_text)
+        {
+            require VENDOR . '/autoload.php';
+            $mail = new PHPMailer(true);
+			$nombre       = $nombre != "" ? $nombre : null;
+			$email        = ($email) != "" ? $email : null;
+			$subject      = ($subject) != "" ? $subject : null;
+			$message_text = ($message_text) != "" ? $message_text : null;
+			
+			
+			
+            try {
+				if(!is_null($nombre) && !is_null($email) && !is_null($subject) && !is_null($message_text))
+				{		
+					
+					$mail->SMTPDebug = 0;
+					$mail->isSMTP();
+					
+					//$mail->CharSet    = 'UTF-8';
+					//$mail->Encoding   = 'base64';
+					//$mail->Host       = 'smtp.office365.com';
+					//$mail->SMTPAuth   = true;
+					//$mail->Username   = 'fvegau@fabriciovega.com';
+					//$mail->Password   = "Serenid4d$34";
+					//$mail->SMTPSecure = 'tls';
+					//$mail->Port = 587;
+					
+					$mail->CharSet    = 'UTF-8';
+					$mail->Encoding   = 'base64';
+					$mail->Host       = 'a2plcpnl0823.prod.iad2.secureserver.net';
+					$mail->SMTPAuth   = true;
+					$mail->Username   = 'support@favitae.info';
+					$mail->Password   = "Bb1357Zz";
+					$mail->SMTPSecure = 'tls';
+					$mail->Port = 25;
+					## MENSAJE A ENVIAR
+					$mail->setFrom($email);
+					$mail->addAddress('fvegau@fabriciovega.com');
+					$mail->isHTML(true);
+					$mail->Subject = 'Consulta Sitio Web';
+					$mail->Body   =  "Nombre: " . $nombre . "\n" . "Correo: " . $email . "\n\n" . "Sitio Web N: " . $subject . "\n\n" . $message_text;
+					
+					if($mail->send())
+					{
+						$this->error = false;
+					}
+					else
+					{
+						$this->$msg = $mail->ErrorInfo;
+						$this->error = true;
+					}
+				}
+				else
+				{
+					$this->$msg  = "Todos los campos son requeridos - All inputs are required";
+					$this->error = true;
+				}
+            } catch (Exception $exception) {
+                $this->msg = $exception->getMessage();
+                $this->error = true;
+            }
         }
     }
 }

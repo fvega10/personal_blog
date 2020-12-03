@@ -51,5 +51,44 @@
 			}
 			header("Location: /index.php");
 		}
+		public function sendEmail()
+		{
+			$nombre         = $_POST['name'];
+			$email          = $_POST['email'];
+			$subject        = $_POST['subject'];
+			$message_text   = $_POST['message'];
+			
+			if($subject == 1)
+			{
+				$subject = "Básico";
+			}
+			else if($subject == 2)
+			{
+				$subject = "Intermedio";
+			}
+			else if($subject == 3)
+			{
+				$subject = "Premium";
+			}
+			else if($subject == 4)
+			{
+				$subject = "Empresarial";
+			}
+			else if($subject == 5)
+			{
+				$subject = "Otro";
+			}
+	
+			$this->userModel = new User($this->config);
+			$this->userModel->sendEmailContact($nombre, $email, $subject, $message_text);
+			if(!$this->userModel->getError())
+			{
+				echo "true";
+			}
+			else
+			{			
+				echo $this->userModel->msgError();
+			}
+		}
 	}
 }

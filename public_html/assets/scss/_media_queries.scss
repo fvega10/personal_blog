@@ -1,27 +1,30 @@
-@media only screen and (max-width: 980px){
-
+@media only screen and (max-width: 980px) {
 }
 
-@media only screen and (max-width: 773px){
-    .home{
-        background-position: 55% 100%;
-        h1{
-            font-size: 58px;
-        }
-        h5 {
-            font-size: 22px;
-        }
+@media only screen and (max-width: 773px) {
+  .home {
+    background-position: 0% 40%;
+    h1 {
+      font-size: 58px;
     }
-    .applications {
-        clip-path: none;
-        min-height: auto;
-        height: auto;
+    h5 {
+      font-size: 22px;
     }
-    .information{
-        clip-path: none;
+  }
+  .applications {
+    clip-path: none;
+    min-height: auto;
+    height: auto;
+  }
+  .information {
+    clip-path: none;
+  }
+  .posts_show_section {
+    .post_title {
+      font-size: 25px;
     }
+  }
 }
 
-@media only screen and (max-width: 450px){
-	
+@media only screen and (max-width: 450px) {
 }

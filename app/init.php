@@ -18,6 +18,8 @@
 	define("UTILS", APP . '/Utils');
 	define("MEDIA", APP . '/../public_html/assets/media');
 	define("LANGUAGES", APP . '/Languages');
+	define("MAILER", APP . "/Mailer/vendor/phpmailer/src" );
+	define("VENDOR", APP . "/Mailer/vendor" );
 
 	if(DEBUG_ENABLE && ($_GET['format'] != 'json')){
 		ini_set('display_errors', 1);
@@ -34,4 +36,7 @@
 	include_once FRAMEWORK . '/Database/DBAbstract.php';
 	include_once FRAMEWORK . '/Database/DBMySQL.php';
 	include_once UTILS . '/Message.php';
+	include_once MAILER . '/PHPMailer.php';
+	include_once MAILER . '/Exception.php';
+	include_once MAILER . '/SMTP.php';
 	

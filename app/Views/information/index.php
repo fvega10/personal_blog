@@ -10,39 +10,31 @@
 			<a class="waves-effect waves-light btn-large pulse modal-trigger" href="#modal1"><?= $lang->lang['About_button']; ?></a>
 		</div>
 	</div>
+	<div class="row socia_media">
+			<a href="https://www.facebook.com/fvegau.10/" class="right-align tooltipped" data-position="left" data-tooltip="Facebook"><img src="/assets/media/facebook.png" width="30" alt="Facebook"></a>
+			<a href="https://www.instagram.com/fabriciovega/" class="right-align tooltipped" data-position="left" data-tooltip="Instagram"><img src="/assets/media/instagram.png" width="30" alt="Instagram"></a>
+			<a href="/users/index.php?action=language" class="right-align tooltipped" data-position="left" data-tooltip="<?= $lang->lang['change_language']; ?>"><img src="/assets/media/traducir.png" width="30" alt="Cambiar idioma"></a>
+	</div>
 </div>
 <!-- Modal Structure -->
-<div id="modal1" class="modal modal-fixed-footer">
+<div id="modal1" class="modal modal-fixed-footer" style="width: 75% !important ; height: 75% !important ;">
     <div class="modal-content">
 		<div class="row">
-			<div class="col s2">
-				<a href="#user"><img class="circle img_about" src="/assets/media/avatar-img.png"></a>
+			<div class="col s12 m2">
+				<a href="#user"><img class="circle img_about" src="/assets/media/avatar-img-2.png"></a>
 			</div>
-			<div class="col s8 offset-s2 tittle_about valign-wrapper">
-				<h4 class="right-align"><?= $lang->lang['About_tittle']; ?></h4>
-			</div>
+			
+			<div class="col s12 m8 offset-m2 tittle_about valign-wrapper">
+				<h4 class="left-align">
+					<?= $lang->lang['About_tittle']; ?>
+					<br>
+				</h4>
+			</div>	
 		</div>
 		<hr>
-		<p class="text-about" style="text-align: center">
-	  		<strong class="rotate"><i class="material-icons">format_quote</i></strong>	
-			Oriundo de Ciudad Quesada, San Carlos, Alajuela, CR.
-			<br>
-			Tengo <?php echo (date("Y") - 1991); ?> años de edad.
-			<br>
-			Desde pequeño he sido amante de los número y del fútbol.
-			<br>
-			Actualmente soy Lic. en Administración de Negocios, además Ingeniero del Software.
-			<br>
-			Mi pasión cambió cerca de los 19 años, pasando de entrenar en campos de fútbol todos los días, ha estar sentado en un escritorio
-			digitando líneas de código de varios lenguajes de programación e interesantes tecnologías que ayudan a complementarlas para que estas sean maravillosas.
-			<br>
-			Mi objetivo principal es: Visualizar necesidades en la población de manera que, con el conocimiento en el ambiente tecnológico pueda aportar mi granito de arena.
-			<br>
-			Cada vez que ingreso a un sitio web en donde se ofrece "X" servicio y estos están inundados en publicidad, me lloran los ojos e intento desarrollar algo parecido.
-			<br>
-			Quiero poder ayudar a pequeños empresarios con la creación de palancas tecnológicas que les permita proyectar su negocios a otro nivel.
-			<br>
-			Esto se ha convertido en un verdadero hobbie para mí.
+		<p class="text-about" style="text-align: justify">
+			<strong class="rotate"><i class="material-icons">format_quote</i></strong>	
+			<?= $lang->lang['WhoIAm']; ?>
 			<strong><i class="material-icons">format_quote</i></strong>
 		</p>
     </div>
@@ -93,7 +85,7 @@
 					<div class="card-reveal">
 						<span class="card-title grey-text text-lighten-1"><?= $row['tittle']; ?><i class="material-icons right">close</i></span>
 						<p><?= $row['short_description']; ?></p>
-						<i class="left-align"><strong>Categoría: </strong><?= $row['name']; ?></i>
+						<i class="left-align"><strong><?= $row['Category']; ?>: </strong><?= $row['name']; ?></i>
 					</div>
 				</div>
 			</div>
@@ -111,114 +103,232 @@
 		<div class="draw_line_info"></div>
 	</div>
 	<div class="row center-align">
-		<div class="col s12 m12 l4" data-aos="fade-right">
+		<div class="col s12 m12 l4">
 			<h5><?= $lang->lang['Development_projects']; ?></h5>
 			<div class="row">
 				<span class="plus">
 					+
 				</span>
-				<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="50"
+				<span data-purecounter-duration="10" data-purecounter-delay="2" data-purecounter-end="100"
                 class="purecounter">0</span>
 			</div>
 		</div>
-		<div class="col s12 m12 l4" data-aos="fade-left">
+		<div class="col s12 m12 l4" >
 			<h5><?= $lang->lang['Year_experience']; ?></h5>
 			<span class="plus">
 				+
 			</span>
-			<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="10"
+			<span data-purecounter-duration="10" data-purecounter-delay="2" data-purecounter-end="10"
                 class="purecounter">0</span>
 		</div>
-		<div class="col s12 m12 l4" data-aos="fade-down">
+		<div class="col s12 m12 l4" >
 			<h5><?= $lang->lang['Tools_used']; ?></h5>
 			<span class="plus">
 				+
 			</span>
-			<span data-purecounter-duration="5" data-purecounter-delay="2" data-purecounter-end="20"
+			<span data-purecounter-duration="10" data-purecounter-delay="2" data-purecounter-end="20"
                 class="purecounter">0</span>
 		</div>
 	</div>
 </div>
-<!--TECHNOLOGIES KNOWLEADE-->
-<div class=" technologies">
+<div class="white contact_panel cardPrices">
 	<div class="center-align" data-aos="fade-down">
-		<h1 class="teal-text text-lighten-1"><?= $lang->lang['Five_tittle_principal']; ?></h1>
+		<h1 class="center-align teal-text text-darken-1"><?= $lang->lang['Services']; ?></h1>
+		<div class="draw_line"></div>
 	</div>
-	<div class="row">
-		<div class="col s8" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/java.jpg">
+	<section class="header">
+		<h3 class="left-align red-text text-lighten-2">
+			<i class="material-icons">chevron_right</i>
+			<?= $lang->lang['Service_1']; ?>
+		</h3>
+		<div class="row">
+			<div class="col m5 s12 center-align">
+				<img class="materialboxed" width="70%" src="/assets/media/websites.png" style="margin: 0 auto;">
+			</div>
+			<div class="col m7 s12">
+				<p class="about_services">
+					<?= $lang->lang['Service_1_Detail']; ?>
+				</p>
+			</div>
 		</div>
-		<div class="col s4 valign-wrapper" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/c.jpg">
+		<div class="row">
+			<div class="col s12 container">
+				<div class="col s12 m4">
+					<div class="card border">
+						<div class="card-head cyan darken-3 center-align">
+							<div class="card-head-content">
+								<span><?= $lang->lang['Basic']; ?></span><br>
+								<span class="price"><?= $lang->lang['Basic_Amount']; ?></span>
+							</div>
+						</div>
+						<div class="card-content no-padding">
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_0']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_1']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_2']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_3']; ?></p>
+							<p class="item-pricing-table"> </p>
+							<p class="item-pricing-table"> </p>
+							<div class="center-align">
+								<a href="/contact/index.php?action=create&option=1" class="center-align btn waves-effect cyan darken-3 purchase-btn"><?= $lang->lang['Detail_Button']; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card border">
+						<div class="card-head grey darken-4 center-align">
+							<div class="card-head-content">
+								<span><?= $lang->lang['Intermediate']; ?></span><br>
+								<span class="price"><?= $lang->lang['Intermediate_Amount']; ?></span>
+							</div>
+						</div>
+						<div class="card-content no-padding">
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_0']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_1']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_2']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_4']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_5']; ?></p>
+							<p class="item-pricing-table"></p>
+							<div align="center">
+								<a href="/contact/index.php?action=create&option=2" align="center" class="btn waves-effect grey darken-4 purchase-btn"><?= $lang->lang['Detail_Button']; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card border">
+						<div class="card-head deep-purple accent-4 center-align">
+							<div class="card-head-content">
+								<span><?= $lang->lang['Premium']; ?><span><br>
+								<span class="price"><?= $lang->lang['Premium_Amount']; ?></span>
+							</div>
+						</div>
+						<div class="card-content no-padding">
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_0']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_1']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_2']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_4']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_5']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_6']; ?></p>
+							<div align="center">
+								<a href="/contact/index.php?action=create&option=3" align="center" class="btn waves-effect deep-purple accent-4 purchase-btn"><?= $lang->lang['Detail_Button']; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col s4" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/php.jpg">
+	</section>
+
+	<section class="header">
+		<h3 class="left-align red-text text-lighten-2">
+			<i class="material-icons">chevron_right</i>
+			<?= $lang->lang['Service_2']; ?>
+		</h3>
+		<div class="row">
+			<div class="col m5 s12 center-align">
+				<img class="materialboxed" width="70%" src="/assets/media/software.png" style="margin: 0 auto;">
+			</div>
+			<div class="col m7 s12">
+				<p class="about_services">
+					<?= $lang->lang['Service_2_Detail']; ?>
+				</p>
+			</div>
 		</div>
-		<div class="col s8" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/type_script.png">
+		<div class="row">
+			<div class="col s12 container">
+				<div class="col s12 m4 offset-m4">
+					<div class="card border">
+						<div class="card-head red darken-3 center-align">
+							<div class="card-head-content">
+								<span><?= $lang->lang['Business']; ?><span><br>
+								<span class="price"><?= $lang->lang['Business_Amount']; ?></span>
+							</div>
+						</div>
+						<div class="card-content no-padding">
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_7']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_8']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_9']; ?></p>
+							<p class="item-pricing-table"><i class="material-icons">check</i> <?= $lang->lang['Detail_10']; ?></p>
+							<div align="center">
+								<a href="/contact/index.php?action=create&option=4" align="center" class="btn waves-effect waves-light red darken-3 purchase-btn"><?= $lang->lang['Detail_Button']; ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col s6" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/html_js_css.png">
-		</div>
-		<div class="col s3" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/bootstrap.png">
-		</div>
-		<div class="col s3" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/materialize.png">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col s6" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/angular.png">
-		</div>
-		<div class="col s3" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/react.png">
-		</div>
-		<div class="col s3" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/laravel.jpg">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col s6" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/mariadb.png">
-		</div>
-		<div class="col s3" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/mysql.jpg">
-		</div>
-		<div class="col s3" data-aos="flip-left">
-			<img class="materialboxed" width="100%" src="/assets/media/phpmyadmin.jpg">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col s3" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/illustrator.jpg">
-		</div>
-		<div class="col s3" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/photoshop.png">
-		</div>
-		<div class="col s6" data-aos="flip-right">
-			<img class="materialboxed" width="100%" src="/assets/media/android.jpg">
-		</div>
-	</div>
+	</section>
 </div>
-<div class="visited_section red darken-1 valign-wrapper">
-	<div class="row">
-		<div class="col s12 center-align" data-aos="fade-down">
-			<h1 class="grey-text text-lighten-5">
-				<i class="large material-icons grey-text text-lighten-5">favorite</i>
-				<br>
+<!--INFO-->
+<div class="grey lighten-5 contact_panel">
+	<div class="center-align" data-aos="fade-down">
+		<h1><?= $lang->lang['Contact_title']; ?></h1>
+		<h4><?= $lang->lang['Contact_info']; ?></h4>
+	</div>
+	<div class="center-align">
+		<a href="https://wa.me/50687082379?text=Deseo%20información" class="btn-large btn waves-effect pulse"><i class="material-icons left">phone_android</i><?= $lang->lang['Contact_btn']; ?></a>
+	</div>
+	
+	<br>
+	<br>
+</div>
+<footer class="page-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text"><?= $lang->lang['Firts_tittle_principal']; ?></h5>
+				<i class="grey-text text-lighten-4" style="text-align: justify;">
+					<?= $lang->lang['Phrase']; ?>
+				</i>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">
+					<?= $lang->lang['Third_tittle_principal']; ?>	
+				</h5>
+				<ul>
+					<?php
+					if(isset($collection)) :
+						foreach ($collection as $row) :	
+					?>
+						<li>
+							<a class="grey-text text-lighten-3" href="/posts/index.php?action=show&id=<?= $row['id']; ?>">
+								- <?= $row['tittle']; ?>
+							</a>
+						</li>
+					<?php
+						endforeach;
+					endif;
+					?>
+				</ul>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">
+					<?= $lang->lang['Contact_button']; ?>	
+				</h5>
+				<ul>
+					<li>
+						<?= $lang->lang['Phone']; ?>:
+						(+506) 87082379
+					</li>
+					
+					<li>
+						<a href="mailto:info@fabriciovega.com" class="grey-text text-lighten-3">
+							fvegau@fabriciovega.com
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			&copy; <?php echo date('Y'); ?> <?= $lang->lang['CopyRight']; ?>
+			<p class="grey-text text-lighten-4 right">
 				<?= $lang->lang['Visited_number']; ?> #
-				<span data-purecounter-duration="5" data-purecounter-end="<?= $counter[0]['cont'];?>"
-                class="purecounter">0</span>
-			</h1>
-			<h5 class="grey-text text-lighten-5"><?= $lang->lang['Visited_thanks']; ?></h5>
+				<span data-purecounter-duration="0.5" data-purecounter-end="<?= $counter[0]['cont'];?>"
+				class="purecounter">0</span>
+		</p>
 		</div>
 	</div>
-</div>
-
-
-
+</footer>

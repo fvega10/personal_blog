@@ -36,6 +36,10 @@
         case 'sendEmail':
             $controller->sendEmail();
         break;
+        
+        case 'language':
+            $controller->language();
+        break;
 
         default:
             $controller->index($login);
@@ -45,5 +49,3 @@
     }else{
         $controller->index($login);
     }
-
-    

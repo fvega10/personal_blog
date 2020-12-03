@@ -8,7 +8,9 @@
 ?>
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Fabricio Vega | Sitio Web</a>
+                <a href="/index.php" class="brand-logo">
+                    <img width="40" src="/assets/media/logotype.png" alt="Logotipo" style="margin-top: 10px">
+                </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="/index.php"><?= $lang->lang['Home_button']; ?></a></li>
                     <li><a href="/contact/index.php?action=create"><?= $lang->lang['Contact_button']; ?></a></li>
@@ -27,9 +29,9 @@
 
 <div class="posts_show_section">
 	<div class="row">
-		<div class="col s9 center-align grey lighten-3 z-depth-4">
+		<div class="col s11 m11 center-align grey lighten-3 z-depth-4">
 			<div class="col s12">
-				<h1 class="grey-text text-darken-2">
+				<h1 class="grey-text text-darken-2 post_title">
 					<?= $collection['tittle']; ?>
 				</h1>
                 <div class="draw_line"></div>
@@ -37,7 +39,7 @@
                 <img src="<?= $collection['img']; ?>" alt="<?= $collection['img']; ?>" width="70%">
 			</div>
             <div class="col s12">
-                <p class="flow-text left-align">
+                <p class="flow-text">
                 <?= $collection['long_description']; ?>
                 </p>  
                 
@@ -46,9 +48,7 @@
             <?php 
                 if(!is_null($collection['link']))
                 {
-            ?>
-                <?= $collection['link']; ?>
-            <?php
+                    echo $collection['link'];
                 }
             ?>
             </div>
@@ -56,23 +56,31 @@
         <?php 
             if(isset($_SESSION['login'])) :
         ?>
-                <div class="col s12">
+                <div class="col s12 right-align">
                     <a class="lime darken-1 btn" href="/posts/index.php?action=edit&id=<?= $collection['id']; ?>">
                         <i class="material-icons right">edit</i>
                         Editar Post
                     </a>
-                    <a class="red darken-4 btn" href="/posts/index.php">
-                        <i class="material-icons right">arrow_back</i>
-                        Regresar
+                    <a class="blue-grey darken-4 btn" href="/posts/index.php">
+                        <i class="material-icons left">arrow_back</i>
+                        <?= $lang->lang['Back_button']; ?>
+                    </a>
+                    <a class="btn waves-effect waves-light" href="/contact/index.php?action=create">
+                        <i class="material-icons left">phone_android</i>
+                        <?= $lang->lang['Contact_button']; ?>
                     </a>
                 </div>
         <?php
             else :
         ?>
-                <div class="col s12 back_show">
-                    <a class="red darken-4 btn" href="/index.php">
-                        <i class="material-icons right">arrow_back</i>
+                <div class="col s12 right-align">
+                    <a class="btn blue-grey darken-4" href="/index.php">
+                        <i class="material-icons left">arrow_back</i>
                         <?= $lang->lang['Back_button']; ?>
+                    </a>
+                    <a class="btn waves-effect waves-light" href="/contact/index.php?action=create">
+                        <i class="material-icons left">phone_android</i>
+                        <?= $lang->lang['Contact_button']; ?>
                     </a>
                 </div>
         <?php
@@ -85,7 +93,9 @@
             </div>
             <div class="col s12 left-align">
                 <h5>
-                    <strong><?= $lang->lang['Likes_tittle']; ?>: </strong><i><?= $collection['counter_likes']; ?></i>
+                    <i class="material-icons red-text" style="position: relative;top: 7px;font-size: 30px;">favorite</i>
+
+                    </strong><i><?= $collection['counter_likes']; ?></i>
                 </h5>
 <?php
     $continue = false;
@@ -97,18 +107,26 @@
         }
     }
                 if(!$continue) :
-?>
-                <a id="like_counter" class="red darken-4 btn-floating pulse" href="/posts/index.php?action=like&id=<?= $collection['id']; ?>">
-                        <i class="material-icons">favorite_border</i>
+?>  
+<hr>
+<br>
+                <a id="like_counter" class="btn waves waves-effect pulse red white-text" href="/posts/index.php?action=like&id=<?= $collection['id']; ?>">
+                        Me gusta
+                        <i class="material-icons left">thumb_up</i>
                 </a>
+                <br>
+                <br>
+    <hr>
                 <br>
                 <br>
             <?php else : ?>
                 <i class="material-icons red-text text-darken-4">favorite</i>
             <?php endif; ?>
             </div>      
-		</div>
-		<div class="col s2 offset-s1 grey lighten-3 z-depth-4">
+        </div>
+        <br>
+		<br>
+		<div class="col s11 m11 grey lighten-3 z-depth-4" style="margin-top: 10px;">
             <h5><?= $lang->lang['Other_articles']; ?></h5>
             <div class="collection">
 <?php
