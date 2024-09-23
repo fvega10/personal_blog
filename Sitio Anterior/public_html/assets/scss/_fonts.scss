@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Josefin+Sans|Quicksand|Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Raleway|Roboto&display=swap");
+
+@mixin fonts-branding-1 {
+  font-family: "Quicksand", sans-serif;
+}
+
+@mixin fonts-branding-2 {
+  font-family: "Abel", sans-serif;
+}
+
+@mixin fonts-branding-3 {
+  font-family: "Squada One", cursive;
+}
+
+@mixin fonts-branding-4 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@mixin font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+@mixin transition($seg) {
+  transition: all $seg ease;
+  -webkit-transition: all $seg ease;
+  -moz-transition: all $seg ease;
+  -o-transition: all $seg ease;
+}
+@mixin cursor {
+  cursor: pointer;
+  -webkit-cursor: pointer;
+  -moz-cursor: pointer;
+  -o-cursor: pointer;
+}
+@mixin shadow {
+  -webkit-box-shadow: 10px 14px 109px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 14px 109px 0px rgba(0, 0, 0, 0.75);
+  -o-box-shadow: 10px 14px 109px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 14px 109px 0px rgba(0, 0, 0, 0.75);
+}
+@mixin titles($color) {
+  color: $color !important;
+  @include fonts-branding-4;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+@mixin floatin() {
+  -webkit-animation: floating 2s ease infinite; /* IE 10+, Fx 29+ */
+  -moz-animation: floating 2s ease infinite; /* IE 10+, Fx 29+ */
+  -o-animation: floating 2s ease infinite; /* IE 10+, Fx 29+ */
+  animation: floating 2s ease infinite; /* IE 10+, Fx 29+ */
+}
+
+@mixin floatin_down() {
+  -webkit-animation: floating_down 2s ease infinite; /* IE 10+, Fx 29+ */
+  -moz-animation: floating_down 2s ease infinite; /* IE 10+, Fx 29+ */
+  -o-animation: floating_down 2s ease infinite; /* IE 10+, Fx 29+ */
+  animation: floating_down 2s ease infinite; /* IE 10+, Fx 29+ */
+}
+$pink-color: #c44569;
+$white-color: #fff;
+$blue-dark-color: #303952;
+$blue-dark-full: #11151e;
+$blue-light: #00d1ff;
+$gray-color: #e5e5e5;
+$gray-color-dark: #9b9b9b;
+$gray-color-full-dark: #6b6b6b;
+$facebook-light: #7b8aaa;
+$facebook-color: #4267b2;
+$google-light: #c49693;
+$google-color: #d67b73;
+$bg_preloader: #ece5df;
+$icon-red: #cb3642;
+$icon-orange: #fdab29;
+$icon-blue: #0f4465;
+$icon-blue-dark: #17384c;
+$icon-blue-light: #3db3e1;
+$icon-green: #61d350;
+$icon-green_shadow: #47a339;
+$icon-brow-light: #dbc83d;
+$input: #0074d9;
+
+@-webkit-keyframes floating {
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@-moz-keyframes floating {
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@-o-keyframes floating {
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes floating {
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes floating_down {
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@-moz-keyframes floating_down {
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@-o-keyframes floating_down {
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes floating_down {
+  50% {
+    bottom: 15px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
